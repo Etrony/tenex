@@ -6,12 +6,8 @@
     "gift": "Спортмастер (3000 рублей)",
     "link": "https://www.sportmaster.ru/product/26555460299/",
     "color": 15158332,
-    "reserved": true,
-    "reserver": {
-      "name": "asdfas fasfas",
-      "phone": "asffas",
-      "email": "elisey.konnov@gmail.com"
-    }
+    "reserved": false,
+    "reserver": null
   },
   {
     "id": 2,
