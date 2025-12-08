@@ -154,7 +154,8 @@
 
         async function loadWishesData() {
             try {
-                const response = await fetch('/api/children');
+                // const response = await fetch('/api/children'); //
+                const response = await fetch('children.json');
                 if (!response.ok) throw new Error('Ошибка загрузки данных с сервера');
                 wishesData = await response.json();
                 updateWishesList();
@@ -680,6 +681,7 @@
     </script>
 </body>
 </html>
+
 
 
 
