@@ -1,6 +1,6 @@
 // Пароль для админки
 const ADMIN_PASSWORD = "tenex_admin_secret";
-const API_URL = 'http://localhost:3000/api';
+const API_URL = '/api';;
 
 // Элементы DOM для авторизации
 const passwordOverlay = document.getElementById('passwordOverlay');
@@ -384,3 +384,4 @@ tabs.forEach(tab => {
         document.getElementById(tabId + 'Tab').classList.add('active');
     });
 });
+
