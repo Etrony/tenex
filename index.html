@@ -682,12 +682,30 @@ function onTouchEnd(event) {
                 </div>
             `;
             
-            modal.style.display = 'flex';
+          //  modal.style.display = 'flex';
+
+function openReservationModal(wishId) {
+    const wish = wishesData.find(w => w.id === wishId);
+    if (!wish) return;
+    currentWishId = wishId;
+
+    modalText.innerHTML = `...`; // ваш HTML
+
+    modal.style.display = 'flex';
+    
+    // 🔹 Блокируем скролл фона ТОЛЬКО сейчас
+    document.body.style.overflow = 'hidden';
+    
+    createQRCode(wish.link, 'qr-container');
+}
+            
             // Генерируем QR-код локально для ссылки подарка
             createQRCode(wish.link, 'qr-container');
         }
 
-        function closeModal() { modal.style.display = 'none'; currentWishId = null; }
+        function closeModal() { modal.style.display = 'none'; currentWishId = null; 
+                              // 🔹 Восстанавливаем скролл
+    document.body.style.overflow = '';}
 
         function createQRCode(url, containerId) {
             const container = document.getElementById(containerId);
@@ -744,6 +762,7 @@ function onTouchEnd(event) {
     </script>
 </body>
 </html>
+
 
 
 
