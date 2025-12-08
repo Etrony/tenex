@@ -787,9 +787,3 @@ input:focus {
         font-size: 16px;
     }
 }
-
-.modal-content {
-    max-height: 90vh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch; /* плавный скролл на iOS */
-}
