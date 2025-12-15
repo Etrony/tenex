@@ -822,3 +822,17 @@ input:focus {
         font-weight: bold;
     }
 }
+
+@media (max-width: 768px) {
+    .countdown-timer {
+        position: absolute !important;
+        top: -60px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: calc(100% - 40px) !important;
+        max-width: 300px !important;
+        text-align: center !important;
+        z-index: 30;
+    }
+}
